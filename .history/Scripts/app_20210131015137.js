@@ -55,16 +55,23 @@
         " Relational database concepts are applied.";
 
         //Projects 1
-        let projectsTextElement = document.getElementById("p1").textContent = p1Text;
-        let p1DescriptionElement = document.getElementById("p1Description").textContent = p1Description;
+        let projectsTextElement = document.getElementById("p1");
+        let p1DescriptionElement = document.getElementById("p1Description");
+        projectsTextElement.textContent = p1Text;
+        p1DescriptionElement.textContent = p1Description;
 
         //Projects 2
         projectsTextElement = document.getElementById("p2").textContent = p2Text;
-        p1DescriptionElement = document.getElementById("p2Description").textContent = p2Description;
+        p1DescriptionElement = document.getElementById("p2Description");
+        p1DescriptionElement.textContent = p2Description;
         //Projects 3
-        projectsTextElement = document.getElementById("p3").textContent = p3Text;
-        p1DescriptionElement = document.getElementById("p3Description").textContent = p3Description;
-      
+        projectsTextElement = document.getElementById("p3");
+        p1DescriptionElement = document.getElementById("p3Description");
+        projectsTextElement.textContent = p3Text;
+        p1DescriptionElement.textContent = p3Description;
+
+  
+       
 
         //Assign styles        
         

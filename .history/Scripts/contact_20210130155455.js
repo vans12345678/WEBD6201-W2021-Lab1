@@ -1,9 +1,3 @@
-/************************************************************
- * Name: Andre Agrippa, Michai Pryce
- * Date: 01/20/2021
- * Description: This file creates a contact class used to
- * create/display contacts for the web application 
- */
 "use strict";
 class Contact {
     //Getters and setters

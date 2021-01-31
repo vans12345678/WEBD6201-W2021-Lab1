@@ -1,9 +1,3 @@
-/************************************************************
- * Name: Andre Agrippa, Michai Pryce
- * Date: 01/20/2021
- * Description: This file creates a contact class used to
- * create/display contacts for the web application 
- */
 "use strict";
 class Contact {
     //Getters and setters
@@ -35,14 +29,12 @@ class Contact {
      * 
      * @param {string} fullName 
      * @param {string} contactNumber 
-     * @param {string} emailAddress
-     * @param {string} shortMessage 
+     * @param {string} emailAddress 
      */
-    constructor(fullName = "", contactNumber = "", emailAddress = "", shortMessage = "") {
+    constructor(fullName = "", contactNumber = "", emailAddress = "") {
         this.FullName = fullName;
         this.ContactNumber = contactNumber;
         this.EmailAddress = emailAddress;
-        this.ShortMessage = shortMessage;
     }
 
     /**
@@ -54,7 +46,7 @@ class Contact {
     toString()
     {
         return `Full Name       : ${this.FullName} \nContactNumber       : ${this.ContactNumber} 
-        \nEmailAddress       :${this.EmailAddress} \nShortMessage       :${this.ShortMessage}`;
+        \nEmailAddress       :${this.EmailAddress}`;
     }
     /**
      *This method returns a JSON object made up of the properties of the Contact class
@@ -67,8 +59,7 @@ class Contact {
         return{
             "fullName": this.FirstName,
             "contactNumber": this.ContactNumber,
-            "emailAddress": this.EmailAddress, 
-            "shortMessage": this.ShortMessage
+            "emailAddress": this.EmailAddress 
         }
     }
     /**
@@ -79,9 +70,9 @@ class Contact {
      */
     serialize()
     {
-        if(this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== "" && this.ShortMessage !== "")
+        if(this.FullName !== "" && this.ContactNumber !== "" && this.EmailAddress !== "")
         {
-            return `${this.FullName}, ${this.ContactNumber}, ${this.EmailAddress}, ${this.ShortMessage}`;
+            return `${this.FullName}, ${this.ContactNumber}, ${this.EmailAddress}`;
         }
         else
         {
@@ -103,7 +94,6 @@ class Contact {
         this.FullName = propertyArray[0];
         this.ContactNumber = propertyArray[1];
         this.EmailAddress = propertyArray[2];
-        this.ShortMessage = propertyArray[3];
 
     }
 }

@@ -28,18 +28,9 @@
     }
     function displayAbout()
     {
-        let andreHeader = "Andre Agrippa:";
-        let andreText = "I'm a 2nd year student at Durham College in the Computer Programming and Analysis program.";
-
-        //Projects 1
-        let headerElement = document.getElementById("aboutAHeader").textContent = andreHeader;
-        let descriptionElement = document.getElementById("aboutAText").textContent = andreText;
-
-        headerElement = document.getElementById("aboutMHeader").textContent = "Michai Header";
-        descriptionElement = document.getElementById("aboutMText").textContent = "Michai Description";
-
-        
-        
+        let p1Text = "Project One: COBOL Item List";
+        let p1TextElement = document.getElementById("p1");
+        p1TextElement.textContent = p1Text; 
     }
     function displayProjects()
     {
@@ -54,17 +45,34 @@
         let p3Description = "This project is a web application that keeps track of animals, owners, appointment and login info in a database." +
         " Relational database concepts are applied.";
 
-        //Projects 1
-        let projectsTextElement = document.getElementById("p1").textContent = p1Text;
-        let p1DescriptionElement = document.getElementById("p1Description").textContent = p1Description;
+        let p1TextElement = document.getElementById("p1");
+        let p1DescriptionElement = document.getElementById("p1Description");
+        p1TextElement.textContent = p1Text;
+        p1DescriptionElement.textContent = p1Description;
 
-        //Projects 2
-        projectsTextElement = document.getElementById("p2").textContent = p2Text;
-        p1DescriptionElement = document.getElementById("p2Description").textContent = p2Description;
-        //Projects 3
-        projectsTextElement = document.getElementById("p3").textContent = p3Text;
-        p1DescriptionElement = document.getElementById("p3Description").textContent = p3Description;
-      
+        p1TextElement = document.getElementById("p1");
+        p1DescriptionElement = document.getElementById("p1Description");
+
+
+        
+        // let p2TextElement = document.getElementById("p2");
+        // let p2DescriptionElement = document.getElementById("p2Description");
+        // p2TextElement.textContent = p2Text;
+        // p2DescriptionElement.textContent = p2Description
+        
+        // let p3TextElement = document.getElementById("p3");
+        // let p3DescriptionElement = document.getElementById("p3Description");
+        // p3TextElement.textContent = p3Text;
+        // p3DescriptionElement.textContent = p3Description
+
+
+        
+        
+        
+        //Assign text content
+
+        
+       
 
         //Assign styles        
         
@@ -145,13 +153,12 @@
     {
         console.log("App Started...");
 
-        //Based of title of html
         switch(document.title)
         {
             case "Index":
                 displayHome();
                 break;
-            case "About Us":
+            case "About":
                 displayAbout();
                 break;
             case "Projects":
