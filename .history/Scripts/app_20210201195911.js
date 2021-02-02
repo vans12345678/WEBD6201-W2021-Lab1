@@ -176,10 +176,6 @@
         }
          
     }
-    function displayHumanResources()
-    {
-        DisplayNav();
-    }
     
     function Start()
     {
@@ -205,9 +201,6 @@
                 break; 
             case "Contact-List":
                 displayContactList();  
-                break; 
-            case "Human Resources":
-                displayHumanResources();  
                 break; 
         }
         

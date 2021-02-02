@@ -24,7 +24,7 @@
 
     function displayHome()
     {
-        DisplayNav();
+        
         let introText = "This is a simple site to demonstrate the specified requirements for Lab 1 WEBD 6201 - Client Side Scripting"; 
         let titleText = "Welcome to WEBD 6201";
         
@@ -40,7 +40,6 @@
     }
     function displayAbout()
     {
-        DisplayNav();
         let andreHeader = "Andre Agrippa:";
         let andreText = "I'm a 2nd year student at Durham College in the Computer Programming and Analysis program.";
 
@@ -56,7 +55,6 @@
     }
     function displayProjects()
     {
-        DisplayNav();
         //Define text and id's
         let p1Text = "Project One: COBOL Item List"; 
         let p2Text = "Project Two: C#, XAML, MDF  Preferred Shares and Common Shares";
@@ -87,7 +85,6 @@
     }
     function displayServices()
     {
-        DisplayNav();
         let s1Header = "Web Development:";
         let s1Text = "We offer a variety of different web development (Front-end, Back-end, Databases). Languages (PHP, ASP.NET, JavaScript)";
         let s2Header = "Service 2:";
@@ -111,7 +108,6 @@
     }
     function displayContact()
     {
-        DisplayNav();
 
         let messageArea = document.getElementById("messageArea");
         messageArea.hidden = true;
@@ -151,7 +147,6 @@
     }
     function displayContactList()
     {
-        DisplayNav();
         if(localStorage.length > 0)
         {
             let contactList = document.getElementById("contactList");
@@ -175,10 +170,6 @@
             contactList.innerHTML = data;
         }
          
-    }
-    function displayHumanResources()
-    {
-        DisplayNav();
     }
     
     function Start()
@@ -205,9 +196,6 @@
                 break; 
             case "Contact-List":
                 displayContactList();  
-                break; 
-            case "Human Resources":
-                displayHumanResources();  
                 break; 
         }
         
