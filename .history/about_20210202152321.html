@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    
+    <!-- CSS Section -->
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="./Content/app.css"> 
+</head>
+<body>
+  <!-- Main Header -->
+    <header>
+      <!-- Main Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a id ="navHome" class="navbar-brand" href="index.html"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a id = "navIndex" class="nav-link fas fa-home fa-lg" aria-current="page" href="index.html"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a id = "navAbout" class="nav-link active fas fa-info fa-lg" aria-current="page" href="about.html"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a id = "navHumanResources" class="nav-link fas fa-fingerprint fa-lg" aria-current="page" href="human-resources.html"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a id = "navContact" class="nav-link fas fa-phone fa-lg" aria-current="page" href="contact.html"></a>
+                  </li>
+                  <li class="nav-item">
+                    <a id = "navProjects" class="nav-link fas fa-project-diagram fa-lg" aria-current="page" href="projects.html">Products</a>
+                  </li>
+                  <li class="nav-item">
+                    <a id = "navServices" class="nav-link fas fa-map fa-lg" aria-current="page" href="services.html"></a>
+                  </li>                  
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+  <!-- Main Contents -->
+    <main>
+        <h1 id = "aboutTitle"class = "container"></h1>
+        <p id="aboutAText"></p>
+        </br>
+        <img src="../images/morpheus.JPG" alt="" style="width:500px;height:250px;">
+    </main>
+    <!-- Main Footer -->
+    <footer>
+      <nav class="navbar fixed-bottom navbar-dark bg-dark">
+          <div class="container-fluid">
+              <h4><i class="far fa-copyright fa-lg site-footer">Copyright 2021.</i></h4>
+          </div>
+        </nav>
+  </footer>
+    <!-- Script Section -->
+    <script src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Scripts/app.js"></script>
+</body>
+</html>
