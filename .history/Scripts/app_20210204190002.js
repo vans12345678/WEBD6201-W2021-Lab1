@@ -37,6 +37,7 @@
         navTextElement = document.getElementById("navProjects").textContent = "Projects";
         navTextElement = document.getElementById("navServices").textContent = "Services";
         navTextElement = document.getElementById("footer").textContent = "Copyright 2021.";
+        console.log(document.title);
     }
 
     function displayHome()

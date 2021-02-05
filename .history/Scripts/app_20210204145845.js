@@ -16,23 +16,12 @@
     {
         let navTextElement = document.getElementById("navHome").textContent = "WEBD 6201";
         navTextElement = document.getElementById("navIndex").textContent = "Home";
-        navTextElement = document.getElementById("navAboutItem").textContent = "About Us";
+        navTextElement = document.getElementById("navAbout").textContent = "About Us";
 
-        let navAboutElement = document.getElementById("navAbout");
-        let hrListItem = document.createElement("li");
-        hrListItem.setAttribute("id", "liHumanResources");
-        hrListItem.setAttribute("class", "nav-item");
-        let navbar = document.getElementById("ulNav").appendChild(hrListItem);
-        hrListItem.innerHTML = `<a class="nav-link" aria-current="page" href="human-resources.html">
-        <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        if(document.title === "Human Resources"){
-            hrListItem.innerHTML = `<a class="nav-link active" aria-current="page" href="human-resources.html">
-            <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        }
-        
-        
-        navAboutElement.after(hrListItem);
 
+        navTextElement = document.getElementById("navHumanResources").innerHTML = `
+            <a  class="nav-link fas fa-fingerprint fa-lg" aria-current="page" href="human-resources.html">Human Resources</a>
+            `;
         navTextElement = document.getElementById("navContact").textContent = "Contact Us";
         navTextElement = document.getElementById("navProjects").textContent = "Projects";
         navTextElement = document.getElementById("navServices").textContent = "Services";
@@ -150,7 +139,7 @@
             let sendButton = document.getElementById("sendButton");
             sendButton.addEventListener("click", function(event)
             {
-                event.preventDefault();
+                //event.preventDefault();
                 // //Displays twice?
                 
                 let contact = new Contact(fullName.value,contactNumber.value, emailAddress.value, shortMessage.value);
@@ -160,7 +149,16 @@
                 {
                     localStorage.setItem((localStorage.length + 1).toString(),contact.serialize());
 
-                    window.location.href = "index.html";
+                    $("#sendButton").on("click", function(){
+                         localStorage.removeItem($(this).val());
+                         location.href = "contact-list.html"; // refresh the page
+                      });
+
+                        // document.getElementById("contactForm").onsubmit = function() 
+                        // {
+                        //   window.location.replace("index.html");
+                        //   return false;
+                        // }
                 }
                    
             });
@@ -196,6 +194,9 @@
     function displayHumanResources()
     {
         DisplayNav();
+        let navTextElement = document.getElementById("navHumanResources").innerHTML = `
+            <a  class="nav-link fas fa-fingerprint fa-lg active" aria-current="page" href="human-resources.html">Human Resources</a>
+            `;
     }
     
     function Start()

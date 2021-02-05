@@ -16,21 +16,13 @@
     {
         let navTextElement = document.getElementById("navHome").textContent = "WEBD 6201";
         navTextElement = document.getElementById("navIndex").textContent = "Home";
-        navTextElement = document.getElementById("navAboutItem").textContent = "About Us";
+        navTextElement = document.getElementById("navAbout").textContent = "About Us";
 
         let navAboutElement = document.getElementById("navAbout");
         let hrListItem = document.createElement("li");
-        hrListItem.setAttribute("id", "liHumanResources");
-        hrListItem.setAttribute("class", "nav-item");
+        hrListItem.setAttribute("id", "navHumanResources");
         let navbar = document.getElementById("ulNav").appendChild(hrListItem);
-        hrListItem.innerHTML = `<a class="nav-link" aria-current="page" href="human-resources.html">
-        <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        if(document.title === "Human Resources"){
-            hrListItem.innerHTML = `<a class="nav-link active" aria-current="page" href="human-resources.html">
-            <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        }
-        
-        
+        hrListItem.innerHTML = `<a class="nav-link fas fa-info fa-lg" aria-current="page" href="human-resources.html">Human Resources</a>`;
         navAboutElement.after(hrListItem);
 
         navTextElement = document.getElementById("navContact").textContent = "Contact Us";

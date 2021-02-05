@@ -20,17 +20,10 @@
 
         let navAboutElement = document.getElementById("navAbout");
         let hrListItem = document.createElement("li");
-        hrListItem.setAttribute("id", "liHumanResources");
+        hrListItem.setAttribute("id", "navHumanResources");
         hrListItem.setAttribute("class", "nav-item");
         let navbar = document.getElementById("ulNav").appendChild(hrListItem);
-        hrListItem.innerHTML = `<a class="nav-link" aria-current="page" href="human-resources.html">
-        <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        if(document.title === "Human Resources"){
-            hrListItem.innerHTML = `<a class="nav-link active" aria-current="page" href="human-resources.html">
-            <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        }
-        
-        
+        hrListItem.innerHTML = `<a class="nav-link" aria-current="page" href="human-resources.html"><i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
         navAboutElement.after(hrListItem);
 
         navTextElement = document.getElementById("navContact").textContent = "Contact Us";

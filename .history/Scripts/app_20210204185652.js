@@ -23,13 +23,12 @@
         hrListItem.setAttribute("id", "liHumanResources");
         hrListItem.setAttribute("class", "nav-item");
         let navbar = document.getElementById("ulNav").appendChild(hrListItem);
-        hrListItem.innerHTML = `<a class="nav-link" aria-current="page" href="human-resources.html">
+        hrListItem.innerHTML = `<a id = "aHumanResources" class="nav-link" aria-current="page" href="human-resources.html">
         <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
-        if(document.title === "Human Resources"){
-            hrListItem.innerHTML = `<a class="nav-link active" aria-current="page" href="human-resources.html">
-            <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
+        if(document.title = "Human Resources"){
+            let aHumanResources = document.getElementById("aHumanResources");
+            aHumanResources.setAttribute("class", "active");
         }
-        
         
         navAboutElement.after(hrListItem);
 
