@@ -1,11 +1,11 @@
-/************************************************************
+/************************************************************\
  * Name: Andre Agrippa, Michai Pryce
  * Date: 01/20/2021
  * Description: This file adds functionality to the Home,
  * About Us, Human Resources, Contact Us, Projects and Services
  * pages.
- * Date Completed:
- */
+ * Date Completed: 02/05/2021
+ ************************************************************\
 
 "use strict";
 
@@ -13,7 +13,7 @@
 (function(){
 
     /**
-     * Display Nav bar function to display nav and footer
+     * This function displays the navbar as well as the footer. Called on all pages
      */
     function DisplayNav()
     {
@@ -21,6 +21,7 @@
         navTextElement = document.getElementById("navIndex").textContent = "Home";
         navTextElement = document.getElementById("navAboutItem").textContent = "About Us";
 
+        //Set human resources via js
         let navAboutElement = document.getElementById("navAbout");
         let hrListItem = document.createElement("li");
         hrListItem.setAttribute("id", "liHumanResources");
@@ -32,7 +33,8 @@
             hrListItem.innerHTML = `<a class="nav-link active" aria-current="page" href="human-resources.html">
             <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
         }
-
+        
+        
         navAboutElement.after(hrListItem);
 
         navTextElement = document.getElementById("navContact").textContent = "Contact Us";
@@ -42,12 +44,12 @@
     }
 
     /**
-     * Display home to display index page
+     * Displays index for website
      */
     function displayHome()
     {
         DisplayNav();
-        let introText = "This is a simple site to demonstrate the about, contact, human resources, projects and services requirements for Lab 1 WEBD 6201 - Client Side Scripting"; 
+        let introText = "This is a simple site to demonstrate the specified requirements for Lab 1 WEBD 6201 - Client Side Scripting"; 
         let titleText = "Welcome to WEBD 6201";
         
         let introTextElement = document.getElementById("indexTitle").textContent = titleText;
@@ -55,7 +57,7 @@
 
     }
     /**
-     * Display about to display about the creators
+     * Displays about us page for website
      */
     function displayAbout()
     {
@@ -68,19 +70,11 @@
         <p class = "">I'm a 2nd year student at Durham College in the Computer Programming and Analysis program. I've been
         coding for several years now because I enjoy it and always looking to improve in this aspect.</p>
         <a class = "fa-lg" href="../resumes/andre_resume.pdf" download>Resume Download</a></br></br>
-        <img src="../images/aa.JPG" alt="" style="width:500px;height:450px;">`;
-
-        //About Michai
-        aboutElement.innerHTML += `<h1>Michai Pryce:</h1>
-        <p class = ""> Hello, I am in my final year in the Computer Programming Program at Durham College. I love
-        to code and learn about the evergrowing advancements in technology. This is the demonstration for our first lab!
-        </p>
-        <a class = "fa-lg" href="../resumes/Copy_of_Resume.docx" download>Resume Download</a></br></br>
-        <img src="../images/m.JPG" alt="" style="width:500px;height:450px;">`;
+        <img src="../images/morpheus.JPG" alt="" style="width:500px;height:250px;">`;
 
     }
     /**
-     * Display top 3 projects page
+     * Displays top 3 projects
      */
     function displayProjects()
     {
@@ -109,7 +103,7 @@
         
     }
     /**
-     * Display top 3 services page
+     * Displays top 3 services
      */
     function displayServices()
     {
@@ -139,7 +133,7 @@
         
     }
     /**
-     * Display contact form page
+     * Contact creation page, has a form and button for submission
      */
     function displayContact()
     {
@@ -185,8 +179,9 @@
             });
             
     }
+    
     /**
-     * Human resources page
+     * Displays human resources page
      */
     function displayHumanResources()
     {
@@ -194,7 +189,7 @@
     }
     
     /**
-     * Start function, depending on document title will load specific page
+     * Upon start of website, loads page depending on document title
      */
     function Start()
     {
@@ -228,7 +223,5 @@
         
 
     }
-
     window.addEventListener("load", Start);
-
 })();

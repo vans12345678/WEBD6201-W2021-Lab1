@@ -32,7 +32,7 @@
             hrListItem.innerHTML = `<a class="nav-link active" aria-current="page" href="human-resources.html">
             <i id ="navHumanResources" class ="fas fa-project-diagram fa-lg">Human Resources</i></a>`;
         }
-
+           
         navAboutElement.after(hrListItem);
 
         navTextElement = document.getElementById("navContact").textContent = "Contact Us";
@@ -41,9 +41,6 @@
         navTextElement = document.getElementById("footer").textContent = "Copyright 2021.";
     }
 
-    /**
-     * Display home to display index page
-     */
     function displayHome()
     {
         DisplayNav();
@@ -54,9 +51,6 @@
         introTextElement = document.getElementById("indexParagraph").textContent = introText;
 
     }
-    /**
-     * Display about to display about the creators
-     */
     function displayAbout()
     {
         DisplayNav();
@@ -79,9 +73,6 @@
         <img src="../images/m.JPG" alt="" style="width:500px;height:450px;">`;
 
     }
-    /**
-     * Display top 3 projects page
-     */
     function displayProjects()
     {
         DisplayNav();
@@ -108,12 +99,15 @@
         <img src="../images/p3.PNG" alt="" style="width:800px;height:500px;">`;
         
     }
-    /**
-     * Display top 3 services page
-     */
     function displayServices()
     {
         DisplayNav();
+        let s1Header = "Web Development:";
+        let s1Text = "We offer a variety of different web development (Front-end, Back-end, Databases). Languages (PHP, ASP.NET, JavaScript)";
+        let s2Header = "Service 2:";
+        let s2Text = "Service 2 text";
+        let s3Header = "Service 3:";
+        let s3Text = "Service 3 text";
 
         //Services 1
         let servicesElement = document.getElementById("servicesTitle").textContent = "Web Development";
@@ -138,9 +132,6 @@
 
         
     }
-    /**
-     * Display contact form page
-     */
     function displayContact()
     {
         DisplayNav();
@@ -185,17 +176,38 @@
             });
             
     }
-    /**
-     * Human resources page
-     */
+    function displayContactList()
+    {
+        DisplayNav();
+        if(localStorage.length > 0)
+        {
+            let contactList = document.getElementById("contactList");
+            let data = "";
+
+            for (let index = 0; index < localStorage.length; index++) 
+            {
+                let contactData = localStorage.getItem((index + 1).toString());
+                let contact = new Contact();
+
+                contact.deserialize(contactData);
+
+                data += `<tr>
+                <th scope="row">${index + 1}</th>
+                <td>${contact.FullName}</td>
+                <td>${contact.ContactNumber}</td>
+                <td>${contact.EmailAddress}</td>
+                <td>${contact.ShortMessage}</td>
+              </tr>`;
+            }
+            contactList.innerHTML = data;
+        }
+         
+    }
     function displayHumanResources()
     {
         DisplayNav();
     }
     
-    /**
-     * Start function, depending on document title will load specific page
-     */
     function Start()
     {
         console.log("App Started...");

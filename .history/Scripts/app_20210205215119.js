@@ -185,17 +185,38 @@
             });
             
     }
-    /**
-     * Human resources page
-     */
+    function displayContactList()
+    {
+        DisplayNav();
+        if(localStorage.length > 0)
+        {
+            let contactList = document.getElementById("contactList");
+            let data = "";
+
+            for (let index = 0; index < localStorage.length; index++) 
+            {
+                let contactData = localStorage.getItem((index + 1).toString());
+                let contact = new Contact();
+
+                contact.deserialize(contactData);
+
+                data += `<tr>
+                <th scope="row">${index + 1}</th>
+                <td>${contact.FullName}</td>
+                <td>${contact.ContactNumber}</td>
+                <td>${contact.EmailAddress}</td>
+                <td>${contact.ShortMessage}</td>
+              </tr>`;
+            }
+            contactList.innerHTML = data;
+        }
+         
+    }
     function displayHumanResources()
     {
         DisplayNav();
     }
     
-    /**
-     * Start function, depending on document title will load specific page
-     */
     function Start()
     {
         console.log("App Started...");
