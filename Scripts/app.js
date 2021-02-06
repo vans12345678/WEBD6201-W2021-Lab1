@@ -116,7 +116,7 @@
         DisplayNav();
 
         //Services 1
-        let servicesElement = document.getElementById("servicesTitle").textContent = "Web Development";
+        let servicesElement = document.getElementById("servicesTitle").textContent = "Services";
         servicesElement = document.getElementById("servicesText").innerHTML = 
         `<h3>Web Development:</h3>
         <p>We offer a variety of different web development (Front-end, Back-end, Databases). Languages (PHP, ASP.NET, JavaScript)</p>
